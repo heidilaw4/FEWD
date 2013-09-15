@@ -1,11 +1,16 @@
 /** with thicker borders **/
 .container {
 	width: 1440px; 
-	overflow: hidden;
-}
+/*  overflow: hidden;
+*/}
+
+
 .wrapper {
-	width: 1440px;
+width: 1880px;
+margin-top: -60px;
+margin-left: -75px;
 }
+
 .hex {
     float: left;
     margin-left: 14px;

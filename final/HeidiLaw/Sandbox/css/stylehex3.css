@@ -1,11 +1,12 @@
 /** with thicker borders **/
-.container {
+.hex .container {
 	width: 1440px; 
+	background-color: white;
 /*  overflow: hidden;
 */}
 
 
-.wrapper {
+.hex .wrapper {
 width: 1880px;
 margin-top: -60px;
 margin-left: -75px;

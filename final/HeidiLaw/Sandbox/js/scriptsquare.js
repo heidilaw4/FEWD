@@ -2,15 +2,30 @@ var colourCounter = 0;
 var colourPalette = [ // be careful to add spaces if you want to match colours
     'rgb(255, 154, 0)',
     'rgb(255, 198, 0)',
-    'rgb(255, 89, 0)']
+    'rgb(255, 89, 0)',
+    'rgb(255, 209, 0)',
+    'rgb(255, 252, 0)',
+    'rgb(255, 167, 0)']
+
+var colourPalette2 = [
+	'rgb(255, 209, 0)',
+	'rgb(255, 253, 64)',
+	'rgb(255, 189, 64)',
+	'rgb(255, 252, 0)',
+	'rgb(255, 207, 115)',
+	'rgb(255, 229, 115)',
+	'rgb(255, 167, 0)',
+	'rgb(225, 220, 64)',
+	'rgb(225, 253, 115)',
+]
 
 $(function(){ // Document-ready shorthand
 
 	$('.boxes').each(function(i, elem){ 
 	// for each box loop through the colourPallette, and  provide set the 
 	// background to the next colour. So cool! Try resizing, nice effect :)
-		idx = i % colourPalette.length
-		$(elem).css('background-color', colourPalette[idx])
+		idx = i % colourPalette2.length
+		$(elem).css('background-color', colourPalette2[idx])
 	})
 
 	$('body').on('click', function () {
@@ -22,7 +37,7 @@ $(function(){ // Document-ready shorthand
 	    colourCounter++;
 	})
 
-	$('body').on('click','.boxes', function(e){
+	$('body').on('mousemove','.boxes', function(e){
 		// cycle through the colours when clicking on individual boxes
 		// oh yeah! Checks colour first, then checks what's the next 
 		// colour in the array, then sets the colour to the next one.
@@ -31,8 +46,8 @@ $(function(){ // Document-ready shorthand
 		$(this).css('background-color', colourPalette[next])
 	})
 
-	$('.boxes:eq(4)').css({ // set the 5th box as black - how dark! 
-    	backgroundColor: "black"
-	})
+	// $('.boxes:eq(4)').css({ // set the 5th box as black - how dark! 
+ //    	backgroundColor: "black"
+	// })
 
 })
